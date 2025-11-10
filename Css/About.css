@@ -1,0 +1,33 @@
+main > div{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 20px;
+    text-align: left;
+    margin-top: 15px;
+}
+main > div > h2{
+    font-size: 40px;
+    font-weight:600;
+    font-family: 'gabriola', serif;
+    text-align: center;
+}
+main > div > h3{
+    font-family: 'gabriola', serif;
+    font-size: 30px;
+}
+
+main{
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-areas:
+    '.'
+    '.'
+    '.'
+    '.'
+    '.'
+    '.';
+    grid-gap: 5px;
+    padding: 30px;
+}

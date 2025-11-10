@@ -1,0 +1,143 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'lato', sans-serif;
+line-height: 1.4;
+color: white;
+background-color: black;
+min-height: 90vh;
+display: flex;
+flex-direction: column;
+}
+ header{
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ footer{
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+ }
+
+ h1 {
+    font-family: 'gabriola', serif;
+    font-size: 30px;
+    letter-spacing: -0.3px;
+    flex: 1;
+ }
+
+ #hamburger_checkbox{
+   display: none;
+ }
+ #hamburger_menu{
+   display: none;
+   cursor: pointer;
+   z-index: 1001;
+   margin-left: 16px;
+ }
+
+ #hamburger_icon{
+   display: none;
+   width: 45px;
+   height: 42px;
+   object-fit: contain;
+ }
+
+ nav{
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  justify-content: flex-end;
+ }
+
+ nav a{
+  font-size: 17px;
+  font-family: serif;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  padding: 3px 7px;
+  border-radius: 8px;
+  transition: text-shadow 0.5s ease;
+  position: relative;
+ }
+ 
+ nav a:hover{
+  text-shadow: 2px 2px 4px rgb(99, 97, 97);
+  color: rgb(97, 96, 96);
+  transform: none;
+ }
+
+
+ @media only screen  and (max-width: 768px) {
+#hamburger_menu {
+  display: block;
+}
+
+#hamburger_icon {
+  display: block;
+}
+
+nav {
+  display: none;
+}
+
+nav{
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  background-color: rgb(255, 254, 254);
+  position: absolute;
+  top: 90%;
+  right: 0;
+  width: 80px;
+  z-index: 999;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#hamburger_checkbox:checked ~ nav {
+  display: flex;
+}
+
+nav a{
+  padding: 17px;
+  font-size: 17px;
+  border-radius: 0;
+  text-align: center;
+}
+ }
+
+ @media only screen and (min-width: 769px) {
+  #hamburger_menu {
+    display: none;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    position: static;
+    width: auto;
+    background: none;
+  }
+  
+ }
+  
+ 
